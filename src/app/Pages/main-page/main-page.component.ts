@@ -10,6 +10,19 @@ declare var $: any;
 export class MainPageComponent implements OnInit, AfterViewInit {
 
   counted = false;
+  dynamicResize = true;
+  type = 'GeoChart';
+  myData = [
+    [{v: 'PL-DS', f: 'Dolnośląskie'}, 123314, ],
+
+  ];
+  chartColumns = ['Województwo', 'Wypadki'];
+  title = 'Title';
+  myOptions = {
+    is3D: true,
+    region: 'PL',
+    resolution: 'provinces',
+  };
   constructor() { }
 
   ngOnInit(): void { }
